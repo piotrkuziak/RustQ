@@ -18,8 +18,8 @@ impl TaskManager {
             println!("Executing {}", task.task_type());
 
             match task.execute() {
-                Ok(res) => println!("Success: {}", res),
-                Err(e) => println!("Error: {}", e),
+                Ok(res) => eprintln!("Success: {}", res),
+                Err(e) => eprintln!("Error: {}", e),
             }
         }
     }
